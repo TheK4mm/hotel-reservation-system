@@ -50,13 +50,13 @@ El sistema centraliza la operación del Hotel Paraíso permitiendo:
 
 ---
 
-## Arquitectura
+```
 
----
+## Arquitectura
 
 El proyecto sigue una **arquitectura en capas** con separación clara de responsabilidades:
 ┌──────────────────────────────────────────────────────┐
-│            CLIENT (Postman / Frontend)        │
+│            CLIENT (Postman / Frontend)               │
 └────────────────────────┬─────────────────────────────┘
                          │ HTTP JSON
 ┌────────────────────────▼─────────────────────────────┐
@@ -81,7 +81,6 @@ El proyecto sigue una **arquitectura en capas** con separación clara de respons
 │              PostgreSQL DATABASE                     │
 │  8 tablas principales + 2 tablas intermedias (N:M)   │
 └──────────────────────────────────────────────────────┘
-```
 
 ## Modelo de Datos
 
