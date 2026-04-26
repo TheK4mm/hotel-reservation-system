@@ -1,10 +1,14 @@
 # Hotel Paraiso API
 
+---
+
 Sistema de Gestión de Reservas para el **Hotel Paraíso** — API REST completa desarrollada con **Spring Boot 3**, **Spring Data JPA** y **PostgreSQL**.
 
 Proyecto académico que implementa arquitectura en capas, modelado de bases de datos relacionales con múltiples tipos de relaciones (1:1, 1:N, N:M), manejo global de excepciones y buenas prácticas de desarrollo backend.
 
 ## Descripción
+
+---
 
 El sistema centraliza la operación del Hotel Paraíso permitiendo:
 
@@ -17,6 +21,8 @@ El sistema centraliza la operación del Hotel Paraíso permitiendo:
 - **Control de empleados** — Recepcionistas y personal que gestiona las reservas
 
 ### Alcance
+
+---
 
 | Incluido | No incluido |
 |----------|-------------|
@@ -45,6 +51,8 @@ El sistema centraliza la operación del Hotel Paraíso permitiendo:
 ---
 
 ## Arquitectura
+
+---
 
 El proyecto sigue una **arquitectura en capas** con separación clara de responsabilidades:
 ┌──────────────────────────────────────────────────────┐
@@ -92,14 +100,13 @@ El proyecto sigue una **arquitectura en capas** con separación clara de respons
 | `Pago` | Pagos parciales o totales asociados a una reserva |
 | `Factura` | Documento fiscal con subtotal, IVA y descuentos |
 
+
 ## Maquina de Estados - Reserva
 
-```
   PENDIENTE ──── confirmar ──→ CONFIRMADA ──── check-in ──→ CHECKIN ──── check-out ──→ CHECKOUT
       │               │                                          │
       └── cancelar ───┘                                    no_show ──→ NO_SHOW
                       └─────────────── cancelar ──────────────────┘
-```
 
 Las transiciones inválidas retornan HTTP 422 con mensaje descriptivo.
 
@@ -273,7 +280,6 @@ hotel-paraiso
             ├── BadRequestException.java
             ├── BusinessException.java
             └── GlobalExceptionHandler.javaç
-```
 
 ---
 
