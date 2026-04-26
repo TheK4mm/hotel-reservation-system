@@ -214,7 +214,6 @@ El sistema retorna respuestas de error claras y estandarizadas:
 
 ## Estructura del Proyecto
 
-```
 hotel-paraiso
 ├── pom.xml
 ├── db/
